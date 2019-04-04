@@ -1,6 +1,7 @@
 const express = require('express')
 const path = require('path')
 const config = require('./config/config.dev')
+
 const app = express()
 
 require('./app')(app)
