@@ -12,22 +12,21 @@ const destPath = __dirname + '/public'
 
 module.exports = (app) => {
 
-    app.engine('hbs', expressHbs({ defaultLayout: 'main.hbs' }))
-    app.set('view engine', 'hbs')
+  app.engine('handlebars', expressHbs({ 
+    defaultLayout: 'main',
+  }))
+  app.set('view engine', 'handlebars')
 
-    app.use(morgan('dev'))
-    app.use(bodyParser.urlencoded({ extended: false }))
-    app.use(bodyParser.json())
-    app.use(sassMiddleware({
-        src: srcPath,
-        dest: destPath,
-        debug: true,
-        outputStyle: 'compressed',
-        prefix: '/prefix'
-    }))
-    console.log(srcPath, destPath)
-    app.use(express.static(path.join(__dirname, 'public')))
+  app.use(morgan('dev'))
+  app.use(bodyParser.urlencoded({ extended: false }))
+  app.use(bodyParser.json())
+  app.use(sassMiddleware({
+    src: srcPath,
+    dest: destPath,
+    debug: true,
+    prefix: '/prefix'
+  }))
+  app.use(express.static(path.join(__dirname, 'public')))
 
-    routes(app)
-
+  routes(app)
 }

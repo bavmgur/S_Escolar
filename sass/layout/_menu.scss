@@ -1,0 +1,47 @@
+.menu {
+
+  &.open &__menu {
+    background-color: black;
+  }
+
+  &__sidebar {
+    background-color: $color-sidebar;
+    position: fixed;
+    height: 100vh;
+    width: 24rem;
+    z-index: 100;
+  }
+
+  &__sidebar-header {
+    box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
+    min-height: 5.6rem;
+  
+  }
+
+  &__sidebar-logo {
+    margin: 0;
+    font-size: 1.6rem;
+    color: $color-white;
+  }
+
+  &__menu {
+    margin-left: 24rem;
+    min-height: 5.6rem;
+    box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
+  }
+
+  &__bars {
+    padding: 0 1.5rem;
+    cursor: pointer;
+
+    i {
+      font-size: 1.8rem;
+      color: $color-sidebar;
+    }
+  }
+
+  &__users-options {
+    background-color: crimson;
+  }
+
+}
