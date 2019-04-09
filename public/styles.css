@@ -15,12 +15,27 @@ body {
 }
 
 .main {
+<<<<<<< HEAD
   margin-left: 24rem;
 }
 
 .menu.open .menu__menu {
   background-color: black;
 }
+=======
+  padding-left: 0;
+  padding-top: 5.6rem;
+  transition: all .3s ease; }
+
+.menu.open + .main {
+  padding-left: 24rem; }
+
+.menu.open .menu__sidebar {
+  left: 0%; }
+
+.menu.open .menu__menu {
+  padding-left: 24rem; }
+>>>>>>> 2fa304883516a42641af777f28be4c84c59b4c18
 
 .menu__sidebar {
   background-color: #404E67;
@@ -28,7 +43,13 @@ body {
   height: 100vh;
   width: 24rem;
   z-index: 100;
+<<<<<<< HEAD
 }
+=======
+  transition: all .3s ease;
+  top: 0;
+  left: -100%; }
+>>>>>>> 2fa304883516a42641af777f28be4c84c59b4c18
 
 .menu__sidebar-header {
   box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
@@ -42,10 +63,20 @@ body {
 }
 
 .menu__menu {
+<<<<<<< HEAD
   margin-left: 24rem;
   min-height: 5.6rem;
   box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
 }
+=======
+  padding-left: 0;
+  height: 5.6rem;
+  box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
+  transition: all .3s ease;
+  position: fixed;
+  z-index: 99;
+  background-color: #fff; }
+>>>>>>> 2fa304883516a42641af777f28be4c84c59b4c18
 
 .menu__bars {
   padding: 0 1.5rem;
@@ -59,8 +90,13 @@ body {
 
 .menu__users-options {
 <<<<<<< HEAD
+<<<<<<< HEAD
   background-color: black;
 }
 =======
   background-color: blue; }
 >>>>>>> e4266cd555d7397367242dbf2fbd12b4dd5112ec
+=======
+  background-color: blue;
+  color: grey; }
+>>>>>>> 2fa304883516a42641af777f28be4c84c59b4c18

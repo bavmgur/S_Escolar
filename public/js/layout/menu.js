@@ -1,7 +1,7 @@
 const appMenu = new Vue({
   el: '#menu',
   data: {
-    isOpen: false
+    isOpen: true
   },
   methods: {
     showOrHideSidebar: function() {
