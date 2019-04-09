@@ -3,47 +3,60 @@
 *::after {
   padding: 0;
   margin: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .main {
-  margin-left: 24rem; }
+  margin-left: 24rem;
+}
 
 .menu.open .menu__menu {
-  background-color: black; }
+  background-color: black;
+}
 
 .menu__sidebar {
   background-color: #404E67;
   position: fixed;
   height: 100vh;
   width: 24rem;
-  z-index: 100; }
+  z-index: 100;
+}
 
 .menu__sidebar-header {
   box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
-  min-height: 5.6rem; }
+  min-height: 5.6rem;
+}
 
 .menu__sidebar-logo {
   margin: 0;
   font-size: 1.6rem;
-  color: #fff; }
+  color: #fff;
+}
 
 .menu__menu {
   margin-left: 24rem;
   min-height: 5.6rem;
-  box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13); }
+  box-shadow: 0 0 1.1rem rgba(0, 0, 0, 0.13);
+}
 
 .menu__bars {
   padding: 0 1.5rem;
-  cursor: pointer; }
-  .menu__bars i {
-    font-size: 1.8rem;
-    color: #404E67; }
+  cursor: pointer;
+}
+
+.menu__bars i {
+  font-size: 1.8rem;
+  color: #404E67;
+}
 
 .menu__users-options {
-  background-color: crimson; }
+  background-color: black;
+}
