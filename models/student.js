@@ -14,7 +14,13 @@ module.exports = (sequelize, DataTypes) => {
         Student.hasMany(models.PaymentDetail, {
             foreignKey: 'StudentId'
         })
-        Student.belongsTo(model.Classroom, {
+        Student.hasMany(models.CoursesDetailStudent, {
+            foreignKey: 'StudentId'
+        })
+        Student.hasMany(models.Score, {
+            foreignKey: 'StudentId'
+        })
+        Student.belongsTo(models.Classroom, {
             foreignKey: 'ClassroomId',
             onDelete: 'CASCADE'
         })

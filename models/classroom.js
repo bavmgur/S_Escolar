@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
         Classroom.hasMany(models.Student, {
             foreignKey: 'ClassroomId'
         })
+
+        Classroom.hasMany(models.ClassroomDetail, {
+            foreignKey: 'ClassroomId'
+        })
     };
     return Classroom;
 };

@@ -6,11 +6,11 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     PaymentDetail.associate = function(models) {
         // associations can be defined here
-        PaymentDetail.belongsTo(model.Student, {
+        PaymentDetail.belongsTo(models.Student, {
             foreignKey: 'StudentId',
             onDelete: 'CASCADE'
         })
-        PaymentDetail.belongsTo(model.SchoolYear, {
+        PaymentDetail.belongsTo(models.SchoolYear, {
             foreignKey: 'SchoolYearId',
             onDelete: 'CASCADE'
         })

@@ -1,15 +1,21 @@
 'use strict';
 module.exports = {
     up: (queryInterface, Sequelize) => {
-        return queryInterface.createTable('ClassroomDetails', {
+        return queryInterface.createTable('Scores', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            tutor: {
-                type: Sequelize.STRING
+            score_1: {
+                type: Sequelize.DOUBLE
+            },
+            score_2: {
+                type: Sequelize.DOUBLE
+            },
+            score_3: {
+                type: Sequelize.DOUBLE
             },
             createdAt: {
                 allowNull: false,
@@ -19,27 +25,36 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.DATE
             },
-            ClassroomId: {
+            StudentId: {
                 type: Sequelize.INTEGER,
                 onDelete: 'CASCADE',
                 references: {
-                    model: 'Classrooms',
+                    model: 'Students',
                     key: 'id',
-                    as: 'ClassroomId'
+                    as: 'StudentId'
                 }
             },
-            TeacherId: {
+            CoursesId: {
                 type: Sequelize.INTEGER,
                 onDelete: 'CASCADE',
                 references: {
-                    model: 'Teachers',
+                    model: 'Courses',
                     key: 'id',
-                    as: 'TeacherId'
+                    as: 'CoursesId'
+                }
+            },
+            BimesterId: {
+                type: Sequelize.INTEGER,
+                onDelete: 'CASCADE',
+                references: {
+                    model: 'Bimesters',
+                    key: 'id',
+                    as: 'BimesterId'
                 }
             }
         });
     },
     down: (queryInterface, Sequelize) => {
-        return queryInterface.dropTable('ClassroomDetails');
+        return queryInterface.dropTable('Scores');
     }
 };

@@ -6,9 +6,12 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Bimester.associate = function(models) {
         // associations can be defined here
-        Bimester.belongsTo(model.SchoolYear, {
+        Bimester.belongsTo(models.SchoolYear, {
             foreignKey: 'SchoolYearId',
             onDelete: 'CASCADE'
+        })
+        Bimester.hasMany(models.Score, {
+            foreignKey: 'BimesterId'
         })
     };
     return Bimester;
